@@ -1,6 +1,23 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Add static generation for all anime episodes
+export async function generateStaticParams() {
+  // Generate static paths for the first 3 episodes of each anime (for IDs 1-12)
+  const paths = [];
+
+  for (let animeId = 1; animeId <= 12; animeId++) {
+    for (let episodeId = 101; episodeId <= 103; episodeId++) {
+      paths.push({
+        id: animeId.toString(),
+        episodeId: episodeId.toString()
+      });
+    }
+  }
+
+  return paths;
+}
+
 // Mock data
 const ANIME_DETAILS = {
   id: "1",

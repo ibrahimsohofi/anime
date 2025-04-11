@@ -1,6 +1,6 @@
-import { fetchAnimeList } from "@/lib/api";
-import { AnimeCard } from "@/components/AnimeCard";
-import { Button } from "@/components/ui/button";
+import { fetchAnimeList } from "../../../../lib/api";
+import { AnimeCard } from "../../../../components/AnimeCard";
+import { Button } from "../../../../components/ui/button";
 import Link from "next/link";
 
 export async function generateStaticParams() {

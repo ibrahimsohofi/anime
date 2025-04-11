@@ -1,6 +1,6 @@
-import { fetchAnimeList } from "@/lib/api";
-import { AnimeCard } from "@/components/AnimeCard";
-import { Button } from "@/components/ui/button";
+import { fetchAnimeList } from "../../lib/api";
+import { AnimeCard } from "../../components/AnimeCard";
+import { Button } from "../../components/ui/button";
 import Link from "next/link";
 
 export async function generateStaticParams() {
@@ -20,7 +20,7 @@ export default function PopularPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {/* Placeholder cards */}
         {Array.from({ length: 12 }).map((_, i) => (
-          <div key={i} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px]">
+          <div key={`popular-placeholder-${i}`} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px]">
             <div className="h-[250px] bg-muted" />
             <div className="p-4">
               <div className="h-5 bg-muted rounded w-3/4 mb-2" />

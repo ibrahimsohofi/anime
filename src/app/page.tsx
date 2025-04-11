@@ -96,7 +96,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Placeholder cards */}
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px] group hover:shadow-lg transition-all">
+            <div key={`popular-placeholder-${i}`} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px] group hover:shadow-lg transition-all">
               <div className="h-[250px] bg-muted relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
@@ -139,7 +139,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {/* Placeholder cards */}
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px] group hover:shadow-lg transition-all">
+            <div key={`recent-placeholder-${i}`} className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden h-[400px] group hover:shadow-lg transition-all">
               <div className="h-[250px] bg-muted relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>

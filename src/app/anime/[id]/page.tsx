@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Add static generation for all anime ids
+export async function generateStaticParams() {
+  // Generate static pages for anime IDs 1 through 12
+  return Array.from({ length: 12 }, (_, i) => ({
+    id: (i + 1).toString()
+  }));
+}
+
 // Mock data
 const ANIME_DETAILS = {
   id: "1",
